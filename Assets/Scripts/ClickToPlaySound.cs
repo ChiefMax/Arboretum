@@ -35,6 +35,14 @@ public class ClickToPlaySound : MonoBehaviour
                         audioSource.Play(0);
                         elements[0].SetActive(true);
                         break;
+                    case "Bird1":
+                        audioSource.clip = audioClips[1];
+                        audioSource.Play(0);
+                        break;
+                    case "Woodpecker":
+                        audioSource.clip = audioClips[2];
+                        audioSource.Play(0);
+                        break;
                     default:
                         break;
                 }
