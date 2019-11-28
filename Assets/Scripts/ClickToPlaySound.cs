@@ -10,6 +10,10 @@ public class ClickToPlaySound : MonoBehaviour
 
     public GameObject[] elements;
 
+    public ParticleSystem leaf;
+
+    Vector3 pos = new Vector3(0, 0, 0);
+
     string BtnName;
 
     // Start is called before the first frame update
@@ -34,19 +38,30 @@ public class ClickToPlaySound : MonoBehaviour
                         audioSource.clip = audioClips[0];
                         audioSource.Play(0);
                         elements[0].SetActive(true);
+                        LeafesSpawn();
                         break;
                     case "Bird1":
                         audioSource.clip = audioClips[1];
                         audioSource.Play(0);
+                        elements[1].SetActive(true);
+                        LeafesSpawn();
                         break;
                     case "Woodpecker":
                         audioSource.clip = audioClips[2];
                         audioSource.Play(0);
+                        elements[2].SetActive(true);
+                        LeafesSpawn();
                         break;
                     default:
                         break;
                 }
             }
         }
+    }
+
+    void LeafesSpawn()
+    {
+        ParticleSystem firework = Instantiate(leaf, pos, Quaternion.identity);
+        firework.GetComponent<ParticleSystem>().Play();
     }
 }
