@@ -10,6 +10,16 @@ public class SceneHandler : MonoBehaviour
         SceneManager.LoadScene("TutorialLevel");
     }
 
+    public void PlayAcutalLevel()
+    {
+        SceneManager.LoadScene("FirstLevel");
+    }
+
+    public void ReplayTutorial()
+    {
+        SceneManager.LoadScene("TutorialLevel");
+    }
+
     public void QuitGame()
     {
         Application.Quit();

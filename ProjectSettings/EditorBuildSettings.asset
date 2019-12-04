@@ -8,8 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScreen.unity
     guid: a96f338aa398a77409af7bfd925bde8b
-  - enabled: 0
-    path: Assets/Scenes/TestTree.unity
+  - enabled: 1
+    path: Assets/Scenes/FirstLevel.unity
     guid: 1175e4c31e4b41447a288f7b81276c1a
   - enabled: 1
     path: Assets/Scenes/TutorialLevel.unity
