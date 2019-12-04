@@ -34,13 +34,13 @@ public class ClickToPlaySound : MonoBehaviour
                 BtnName = hit.transform.name;
                 switch (BtnName)
                 {
-                    case "testBtn":
+                    case "Squirrel":
                         audioSource.clip = audioClips[0];
                         audioSource.Play(0);
                         elements[0].SetActive(true);
                         LeafesSpawn();
                         break;
-                    case "Bird1":
+                    case "Blackbrid":
                         audioSource.clip = audioClips[1];
                         audioSource.Play(0);
                         elements[1].SetActive(true);
@@ -86,12 +86,6 @@ public class ClickToPlaySound : MonoBehaviour
                         audioSource.clip = audioClips[7];
                         audioSource.Play(0);
                         elements[7].SetActive(true);
-                        LeafesSpawn();
-                        break;
-                    case "Blackbrid":
-                        audioSource.clip = audioClips[8];
-                        audioSource.Play(0);
-                        elements[8].SetActive(true);
                         LeafesSpawn();
                         break;
                     default:

@@ -7,7 +7,7 @@ public class SceneHandler : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("TestTree");
+        SceneManager.LoadScene("TutorialLevel");
     }
 
     public void QuitGame()
