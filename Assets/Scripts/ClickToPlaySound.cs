@@ -41,7 +41,7 @@ public class ClickToPlaySound : MonoBehaviour
                         LeafesSpawn();
                         break;
                     case "Blackbrid":
-                        audioSource.clip = audioClips[1];
+                        audioSource.clip = audioClips[3];
                         audioSource.Play(0);
                         elements[1].SetActive(true);
                         LeafesSpawn();
@@ -52,38 +52,38 @@ public class ClickToPlaySound : MonoBehaviour
                         elements[2].SetActive(true);
                         LeafesSpawn();
                         break;
-                    case "Fox":
-                        audioSource.clip = audioClips[3];
+                    case "fox":
+                        audioSource.clip = audioClips[4];
                         audioSource.Play(0);
                         elements[3].SetActive(true);
                         LeafesSpawn();
                         break;
                     case "Bunny":
-                        audioSource.clip = audioClips[4];
+                        audioSource.clip = audioClips[8];
                         audioSource.Play(0);
                         elements[4].SetActive(true);
                         LeafesSpawn();
                         break;
-                    case "Oak":
-                        audioSource.clip = audioClips[5];
+                    case "Acorn":
+                        audioSource.clip = audioClips[6];
                         audioSource.Play(0);
                         elements[5].SetActive(true);
                         LeafesSpawn();
                         break;
-                    case "Grass":
-                        audioSource.clip = audioClips[6];
+                    case "grassblades":
+                        audioSource.clip = audioClips[5];
                         audioSource.Play(0);
                         elements[6].SetActive(true);
                         LeafesSpawn();
                         break;
-                    case "Catapiller":
-                        audioSource.clip = audioClips[6];
+                    case "Catarpiller":
+                        audioSource.clip = audioClips[9];
                         audioSource.Play(0);
                         elements[6].SetActive(true);
                         LeafesSpawn();
                         break;
                     case "Sparrow":
-                        audioSource.clip = audioClips[7];
+                        audioSource.clip = audioClips[1];
                         audioSource.Play(0);
                         elements[7].SetActive(true);
                         LeafesSpawn();

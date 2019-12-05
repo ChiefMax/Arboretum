@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class XPHandler : MonoBehaviour
 {
     string BtnName;
     [SerializeField]
-    public RawImage imageToChange;
+    public Image imageToChange;
+
+    public TextMeshProUGUI text;
 
     float valueToChange;
-    float staticHeight = 32f;
+
+    int counter = 0;
+    int Lvl = 1;
 
     /*
     *black bird
@@ -34,15 +39,24 @@ public class XPHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float staticHeight = 32f;
-        if (Input.GetKeyDown(KeyCode.F))
+        //float staticHeight = 32f;
+        //if (Input.GetKeyDown(KeyCode.F))
+        //{
+        //    bool nextTest = true;
+        //    if (nextTest)
+        //    {
+        //        imageToChange.rectTransform.sizeDelta += new Vector2(60f, staticHeight);
+        //    }
+        //}
+
+        if (counter == 5)
         {
-            bool nextTest = true;
-            if (nextTest)
-            {
-                imageToChange.rectTransform.sizeDelta += new Vector2(60f, staticHeight);
-            }
+            Lvl++;
+            text.text = Lvl.ToString();
+            imageToChange.fillAmount = 0f;
+            counter = 0;
         }
+
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
@@ -53,37 +67,46 @@ public class XPHandler : MonoBehaviour
                 switch (BtnName)
                 {
                     case "Squirrel":
-                        valueToChange += 60f;
+                        imageToChange.fillAmount += 0.2f;
+                        counter++;
                         break;
                     case "Blackbrid":
-                        valueToChange += 60f;
+                        imageToChange.fillAmount += 0.2f;
+                        counter++;
                         break;
                     case "Woodpecker":
-                        valueToChange += 60f;
+                        imageToChange.fillAmount += 0.2f;
+                        counter++;
                         break;
-                    case "Fox":
-                        valueToChange += 60f;
+                    case "fox":
+                        imageToChange.fillAmount += 0.2f;
+                        counter++;
                         break;
                     case "Bunny":
-                        valueToChange += 60f;
+                        imageToChange.fillAmount += 0.2f;
+                        counter++;
                         break;
-                    case "Oak":
-                        valueToChange += 60f;
+                    case "Acorn":
+                        imageToChange.fillAmount += 0.2f;
+                        counter++;
                         break;
-                    case "Grass":
-                        valueToChange += 60f;
+                    case "grassblades":
+                        imageToChange.fillAmount += 0.2f;
+                        counter++;
                         break;
-                    case "Catapiller":
-                        valueToChange += 60f;
+                    case "Catarpiller":
+                        imageToChange.fillAmount += 0.2f;
+                        counter++;
                         break;
                     case "Sparrow":
-                        valueToChange += 60f;
+                        imageToChange.fillAmount += 0.2f;
+                        counter++;
                         break;
                     default:
                         break;
                 }
             }
-            imageToChange.rectTransform.sizeDelta += new Vector2(valueToChange, staticHeight);
+            
         }
     }
 }
