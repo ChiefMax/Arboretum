@@ -38,55 +38,55 @@ public class ClickToPlaySound : MonoBehaviour
                         audioSource.clip = audioClips[0];
                         audioSource.Play(0);
                         elements[0].SetActive(true);
-                        LeafesSpawn();
+                        LeafesSpawn(hit.transform.position);
                         break;
                     case "Blackbrid":
                         audioSource.clip = audioClips[3];
                         audioSource.Play(0);
                         elements[1].SetActive(true);
-                        LeafesSpawn();
+                        LeafesSpawn(hit.transform.position);
                         break;
                     case "Woodpecker":
                         audioSource.clip = audioClips[2];
                         audioSource.Play(0);
                         elements[2].SetActive(true);
-                        LeafesSpawn();
+                        LeafesSpawn(hit.transform.position);
                         break;
                     case "fox":
                         audioSource.clip = audioClips[4];
                         audioSource.Play(0);
                         elements[3].SetActive(true);
-                        LeafesSpawn();
+                        LeafesSpawn(hit.transform.position);
                         break;
                     case "Bunny":
                         audioSource.clip = audioClips[8];
                         audioSource.Play(0);
                         elements[4].SetActive(true);
-                        LeafesSpawn();
+                        LeafesSpawn(hit.transform.position);
                         break;
                     case "Acorn":
                         audioSource.clip = audioClips[6];
                         audioSource.Play(0);
                         elements[5].SetActive(true);
-                        LeafesSpawn();
+                        LeafesSpawn(hit.transform.position);
                         break;
                     case "grassblades":
                         audioSource.clip = audioClips[5];
                         audioSource.Play(0);
                         elements[6].SetActive(true);
-                        LeafesSpawn();
+                        LeafesSpawn(hit.transform.position);
                         break;
-                    case "Catarpiller":
+                    case "Caterpillar":
                         audioSource.clip = audioClips[9];
                         audioSource.Play(0);
-                        elements[6].SetActive(true);
-                        LeafesSpawn();
+                        elements[7].SetActive(true);
+                        LeafesSpawn(hit.transform.position);
                         break;
                     case "Sparrow":
                         audioSource.clip = audioClips[1];
                         audioSource.Play(0);
                         elements[7].SetActive(true);
-                        LeafesSpawn();
+                        LeafesSpawn(hit.transform.position);
                         break;
                     default:
                         break;
@@ -95,9 +95,9 @@ public class ClickToPlaySound : MonoBehaviour
         }
     }
 
-    void LeafesSpawn()
+    void LeafesSpawn(Vector3 spawnPos)
     {
-        ParticleSystem firework = Instantiate(leaf, pos, Quaternion.identity);
+        ParticleSystem firework = Instantiate(leaf, spawnPos, Quaternion.identity);
         firework.GetComponent<ParticleSystem>().Play();
     }
 }
